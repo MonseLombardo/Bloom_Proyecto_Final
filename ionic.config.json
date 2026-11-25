@@ -1,0 +1,7 @@
+{
+  "name": "Bloom_Proyecto_Final",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
