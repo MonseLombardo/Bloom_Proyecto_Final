@@ -2,8 +2,16 @@
 import { Component } from '@angular/core';
 import { IonContent, IonIcon } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { flowerOutline } from 'ionicons/icons';
-import { checkmarkCircle, ellipseOutline } from 'ionicons/icons';
+import {
+  flowerOutline,
+  checkmarkCircle,
+  ellipseOutline,
+  sunnyOutline,
+  partlySunnyOutline,
+  moonOutline,
+} from 'ionicons/icons';
+
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -16,6 +24,9 @@ export class Tab1Page {
       'flower-outline': flowerOutline,
       'checkmark-circle': checkmarkCircle,
       'ellipse-outline': ellipseOutline,
+      'sunny-outline': sunnyOutline,
+      'partly-sunny-outline': partlySunnyOutline,
+      'moon-outline': moonOutline,
     });
   }
 
@@ -26,6 +37,24 @@ export class Tab1Page {
   }).format(new Date());
 
   readonly greeting = this.getGreeting();
+
+  readonly periods = [
+    {
+      name: 'Mañana',
+      icon: 'sunny-outline',
+      description: 'Empezá el día con calma',
+    },
+    {
+      name: 'Tarde',
+      icon: 'partly-sunny-outline',
+      description: 'Un momento para vos',
+    },
+    {
+      name: 'Noche',
+      icon: 'moon-outline',
+      description: 'Cerrá el día cuidándote',
+    },
+  ];
 
   habits = [
     {
@@ -64,6 +93,10 @@ export class Tab1Page {
 
   get totalHabits(): number {
     return this.habits.length;
+  }
+
+  getHabitsByPeriod(period: string) {
+    return this.habits.filter(habit => habit.period === period);
   }
 
   toggleHabit(id: number): void {

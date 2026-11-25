@@ -45,7 +45,7 @@
       </div>
     </section>
 
-    <!-- Lista de hábitos -->
+    <!-- Hábitos organizados por momento del día -->
     <section class="habits-section">
       <div class="section-heading">
         <div>
@@ -54,22 +54,40 @@
         </div>
       </div>
 
-      @for (habit of habits; track habit.id) {
-      <article class="habit-card" [class.habit-completed]="habit.completed">
-        <div class="habit-emoji">{{ habit.emoji }}</div>
+      @for (period of periods; track period.name) {
+      <div class="period-section">
+        <div class="period-heading">
+          <div class="period-icon">
+            <ion-icon [name]="period.icon"></ion-icon>
+          </div>
 
-        <div class="habit-info">
-          <h3>{{ habit.name }}</h3>
-          <p>{{ habit.description }}</p>
-          <span class="habit-period">{{ habit.period }}</span>
+          <div class="period-info">
+            <h3>{{ period.name }}</h3>
+            <p>{{ period.description }}</p>
+          </div>
+
+          <span class="period-count">
+            {{ getHabitsByPeriod(period.name).length }}
+          </span>
         </div>
 
-        <button class="habit-toggle" [class.toggle-completed]="habit.completed"
-          [attr.aria-label]="habit.completed ? 'Marcar como pendiente' : 'Marcar como completado'"
-          (click)="toggleHabit(habit.id)">
-          <ion-icon [name]="habit.completed ? 'checkmark-circle' : 'ellipse-outline'"></ion-icon>
-        </button>
-      </article>
+        @for (habit of getHabitsByPeriod(period.name); track habit.id) {
+        <article class="habit-card" [class.habit-completed]="habit.completed">
+          <div class="habit-emoji">{{ habit.emoji }}</div>
+
+          <div class="habit-info">
+            <h3>{{ habit.name }}</h3>
+            <p>{{ habit.description }}</p>
+          </div>
+
+          <button class="habit-toggle" [class.toggle-completed]="habit.completed"
+            [attr.aria-label]="habit.completed ? 'Marcar como pendiente' : 'Marcar como completado'"
+            (click)="toggleHabit(habit.id)">
+            <ion-icon [name]="habit.completed ? 'checkmark-circle' : 'ellipse-outline'"></ion-icon>
+          </button>
+        </article>
+        }
+      </div>
       }
     </section>
 

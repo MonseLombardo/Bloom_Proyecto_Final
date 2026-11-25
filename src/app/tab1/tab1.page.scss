@@ -209,3 +209,60 @@
 .toggle-completed {
     color: #8b719b;
 }
+
+/* Grupos por momento del día */
+.period-section {
+    margin-bottom: 24px;
+}
+
+.period-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 4px 2px;
+}
+
+.period-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    color: #9277a3;
+    background: #eee7f5;
+    border-radius: 15px;
+    font-size: 22px;
+}
+
+.period-info {
+    flex: 1;
+}
+
+.period-info h3 {
+    margin: 0;
+    color: #55445f;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.period-info p {
+    margin: 4px 0 0;
+    color: #918498;
+    font-size: 12px;
+}
+
+.period-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 27px;
+    height: 27px;
+    padding: 0 8px;
+    color: #9277a3;
+    background: #eee7f5;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
