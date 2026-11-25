@@ -1,15 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="day-content">
+  <main class="day-container">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <!-- Encabezado de bienvenida -->
+    <section class="welcome-section">
+      <div class="welcome-text">
+        <p class="current-date">{{ currentDate }}</p>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+        <h1>{{ greeting }}</h1>
+
+        <p class="welcome-message">
+          Hoy es una nueva oportunidad para cuidar de vos.
+        </p>
+      </div>
+
+      <div class="flower-decoration" aria-hidden="true">
+        <ion-icon name="flower-outline"></ion-icon>
+      </div>
+    </section>
+
+  </main>
 </ion-content>

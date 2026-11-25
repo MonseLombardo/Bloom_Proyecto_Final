@@ -1,0 +1,66 @@
+.day-content {
+    --background: #f8f5fb;
+}
+
+.day-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 22px 40px;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 22px;
+    background: linear-gradient(135deg, #eee5f5, #f8eaf0);
+    border: 1px solid #eee3f1;
+    border-radius: 26px;
+    box-shadow: 0 5px 18px rgba(115, 91, 130, 0.06);
+}
+
+.welcome-text {
+    min-width: 0;
+}
+
+.current-date {
+    margin: 0 0 10px;
+    color: #887694;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.welcome-text h1 {
+    margin: 0;
+    color: #55445f;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+}
+
+.welcome-message {
+    max-width: 230px;
+    margin: 9px 0 0;
+    color: #817389;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.flower-decoration {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    color: #9277a3;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+}
+
+.flower-decoration ion-icon {
+    font-size: 36px;
+}
