@@ -18,5 +18,60 @@
       </div>
     </section>
 
+    <!-- Resumen de hábitos -->
+    <section class="summary-section">
+      <div class="section-heading">
+        <div>
+          <h2>Mi resumen</h2>
+          <p>Pequeños pasos, grandes cambios.</p>
+        </div>
+      </div>
+
+      <div class="summary-grid">
+        <article class="summary-card completed-card">
+          <span class="summary-number">{{ completedHabits }}</span>
+          <span class="summary-label">Completados</span>
+        </article>
+
+        <article class="summary-card pending-card">
+          <span class="summary-number">{{ pendingHabits }}</span>
+          <span class="summary-label">Pendientes</span>
+        </article>
+
+        <article class="summary-card total-card">
+          <span class="summary-number">{{ totalHabits }}</span>
+          <span class="summary-label">En total</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Lista de hábitos -->
+    <section class="habits-section">
+      <div class="section-heading">
+        <div>
+          <h2>Mis hábitos</h2>
+          <p>Elegí avanzar a tu propio ritmo.</p>
+        </div>
+      </div>
+
+      @for (habit of habits; track habit.id) {
+      <article class="habit-card" [class.habit-completed]="habit.completed">
+        <div class="habit-emoji">{{ habit.emoji }}</div>
+
+        <div class="habit-info">
+          <h3>{{ habit.name }}</h3>
+          <p>{{ habit.description }}</p>
+          <span class="habit-period">{{ habit.period }}</span>
+        </div>
+
+        <button class="habit-toggle" [class.toggle-completed]="habit.completed"
+          [attr.aria-label]="habit.completed ? 'Marcar como pendiente' : 'Marcar como completado'"
+          (click)="toggleHabit(habit.id)">
+          <ion-icon [name]="habit.completed ? 'checkmark-circle' : 'ellipse-outline'"></ion-icon>
+        </button>
+      </article>
+      }
+    </section>
+
   </main>
 </ion-content>

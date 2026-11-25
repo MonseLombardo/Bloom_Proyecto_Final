@@ -64,3 +64,148 @@
 .flower-decoration ion-icon {
     font-size: 36px;
 }
+
+
+/* Resumen de hábitos */
+.summary-section,
+.habits-section {
+    margin-top: 30px;
+}
+
+.section-heading {
+    margin-bottom: 16px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #55445f;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 5px 0 0;
+    color: #918498;
+    font-size: 13px;
+}
+
+/* Contadores */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11px;
+}
+
+.summary-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 95px;
+    padding: 14px 6px;
+    border: 1px solid #eee7f1;
+    border-radius: 20px;
+}
+
+.completed-card {
+    background: #f0edf6;
+}
+
+.pending-card {
+    background: #f9edf1;
+}
+
+.total-card {
+    background: #edf3ef;
+}
+
+.summary-number {
+    color: #55445f;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.summary-label {
+    color: #817389;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Tarjetas de hábitos */
+.habits-section {
+    margin-bottom: 20px;
+}
+
+.habit-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 12px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #eee8f1;
+    border-radius: 20px;
+    box-shadow: 0 3px 12px rgba(115, 91, 130, 0.04);
+    transition: background 0.2s ease;
+}
+
+.habit-completed {
+    background: #f3f0f6;
+}
+
+.habit-emoji {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: #f5eff8;
+    border-radius: 15px;
+    font-size: 23px;
+}
+
+.habit-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.habit-info h3 {
+    margin: 0;
+    color: #55445f;
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.habit-info p {
+    margin: 4px 0 7px;
+    color: #918498;
+    font-size: 12px;
+}
+
+.habit-period {
+    color: #9277a3;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.habit-toggle {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    color: #b9a9c2;
+    background: transparent;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.toggle-completed {
+    color: #8b719b;
+}
