@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonContent, IonIcon } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 import { addIcons } from 'ionicons';
 import {
   flowerOutline,
@@ -10,12 +11,11 @@ import {
   moonOutline,
 } from 'ionicons/icons';
 
-
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  imports: [IonContent, IonIcon],
+  imports: [IonContent, IonIcon, FormsModule],
 })
 export class Tab1Page implements OnInit {
 
@@ -24,7 +24,6 @@ export class Tab1Page implements OnInit {
 
     if (savedHabits) {
       this.habits = JSON.parse(savedHabits);
-
     }
   }
 
@@ -92,6 +91,11 @@ export class Tab1Page implements OnInit {
     },
   ];
 
+  showHabitForm = false;
+  newHabitName = '';
+  newHabitDescription = '';
+  newHabitPeriod = 'Mañana';
+
   get completedHabits(): number {
     return this.habits.filter(habit => habit.completed).length;
   }
@@ -113,8 +117,39 @@ export class Tab1Page implements OnInit {
 
     if (habit) {
       habit.completed = !habit.completed;
-      localStorage.setItem('bloom-habits', JSON.stringify(this.habits));
+      this.saveHabits();
     }
+  }
+
+  addHabit(): void {
+    const name = this.newHabitName.trim();
+
+    if (!name) {
+      return;
+    }
+
+    const newHabit = {
+      id: this.habits.length > 0
+        ? Math.max(...this.habits.map(habit => habit.id)) + 1
+        : 1,
+      name,
+      description: this.newHabitDescription.trim() || 'Un pequeño paso para cuidarme',
+      period: this.newHabitPeriod,
+      emoji: '🌸',
+      completed: false,
+    };
+
+    this.habits.push(newHabit);
+    this.saveHabits();
+
+    this.newHabitName = '';
+    this.newHabitDescription = '';
+    this.newHabitPeriod = 'Mañana';
+    this.showHabitForm = false;
+  }
+
+  private saveHabits(): void {
+    localStorage.setItem('bloom-habits', JSON.stringify(this.habits));
   }
 
   private getGreeting(): string {
