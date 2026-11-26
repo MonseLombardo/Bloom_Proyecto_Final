@@ -1,5 +1,4 @@
-
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonContent, IonIcon } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import {
@@ -18,7 +17,17 @@ import {
   styleUrls: ['tab1.page.scss'],
   imports: [IonContent, IonIcon],
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
+
+  ngOnInit(): void {
+    const savedHabits = localStorage.getItem('bloom-habits');
+
+    if (savedHabits) {
+      this.habits = JSON.parse(savedHabits);
+
+    }
+  }
+
   constructor() {
     addIcons({
       'flower-outline': flowerOutline,
@@ -104,6 +113,7 @@ export class Tab1Page {
 
     if (habit) {
       habit.completed = !habit.completed;
+      localStorage.setItem('bloom-habits', JSON.stringify(this.habits));
     }
   }
 
