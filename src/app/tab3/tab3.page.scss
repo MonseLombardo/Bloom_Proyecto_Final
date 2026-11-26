@@ -1,0 +1,114 @@
+.tips-content {
+    --background: #fcfaff;
+}
+
+.tips-intro {
+    padding: 28px 22px 18px;
+}
+
+.eyebrow {
+    color: #9b83bd;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tips-intro h1 {
+    margin: 10px 0 8px;
+    color: #514365;
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+
+.tips-intro p {
+    margin: 0;
+    color: #837a8e;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.tips-list {
+    padding: 0 14px 24px;
+}
+
+.tip-card {
+    margin: 12px 0;
+    border: 1px solid #f0eaf7;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(111, 91, 139, 0.06);
+}
+
+.tip-card ion-card-header {
+    padding: 18px 18px 8px;
+}
+
+.tip-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.tip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: #f1ebfa;
+}
+
+.tip-icon ion-icon {
+    color: #9277b5;
+    font-size: 22px;
+}
+
+.tip-heading ion-badge {
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #f7f1fb;
+    color: #9277a9;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.tip-card ion-card-title {
+    color: #514365;
+    font-size: 1.05rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+.tip-card ion-card-content {
+    padding: 4px 18px 18px;
+    color: #817889;
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+.tip-card ion-card-content p {
+    margin: 0;
+}
+
+.loading-state,
+.message-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 48px 24px;
+    color: #8b7d9b;
+    text-align: center;
+}
+
+.loading-state ion-spinner {
+    color: #a58ac8;
+}
+
+.message-state ion-icon {
+    color: #a58ac8;
+    font-size: 34px;
+}
