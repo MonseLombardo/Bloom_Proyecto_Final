@@ -1,15 +1,63 @@
-<ion-header [translucent]="true">
+﻿<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tab 2 </ion-title>
+    <ion-title>Misiones</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="missions-content">
+  <section class="missions-intro">
+    <span class="eyebrow">PEQUEÑOS PASOS, GRANDES CAMBIOS</span>
+    <h1>Misiones para vos ✨</h1>
+    <p>
+      Regalate momentos para crecer, descubrir y cuidar de vos.
+      Cada pequeño logro cuenta.
+    </p>
+  </section>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  @if (loading) {
+    <div class="loading-state">
+      <ion-spinner name="crescent"></ion-spinner>
+      <p>Preparando tus misiones...</p>
+    </div>
+  } @else if (error) {
+    <div class="message-state">
+      <ion-icon name="leaf-outline"></ion-icon>
+      <p>{{ error }}</p>
+    </div>
+  } @else if (misiones.length === 0) {
+    <div class="message-state">
+      <p>Por ahora no hay misiones disponibles.</p>
+    </div>
+  } @else {
+    <section class="missions-list">
+      @for (mision of misiones; track mision.id) {
+        <ion-card class="mission-card">
+          <ion-card-header>
+            <div class="mission-heading">
+              <div class="mission-icon">
+                <ion-icon [name]="mision.icon"></ion-icon>
+              </div>
+              <ion-badge>{{ mision.category }}</ion-badge>
+            </div>
+            <ion-card-title>{{ mision.title }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p class="mission-description">{{ mision.description }}</p>
+
+            <div class="mission-footer">
+              <span class="mission-duration">
+                <ion-icon name="leaf-outline"></ion-icon>
+                {{ mision.duration }}
+              </span>
+
+              <span class="mission-points">
+                ✨ {{ mision.points }} puntos
+              </span>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      }
+    </section>
+  }
 </ion-content>
