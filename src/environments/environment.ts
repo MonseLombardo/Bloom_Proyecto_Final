@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  misionesUrl: 'assets/data/misiones.json',
+  consejosUrl: 'assets/data/consejos.json',
 };
 
 /*
