@@ -1,0 +1,38 @@
+﻿[
+  {
+    "id": 1,
+    "title": "Regalate una pausa",
+    "description": "Tomate cinco minutos para respirar profundamente y desconectar de tus pendientes.",
+    "category": "Bienestar",
+    "duration": "5 minutos",
+    "points": 10,
+    "icon": "leaf-outline"
+  },
+  {
+    "id": 2,
+    "title": "Un espacio más tranquilo",
+    "description": "Ordená un pequeño rincón de tu habitación o de tu espacio de estudio.",
+    "category": "Organización",
+    "duration": "10 minutos",
+    "points": 15,
+    "icon": "sparkles-outline"
+  },
+  {
+    "id": 3,
+    "title": "Desconexión digital",
+    "description": "Dejá el celular a un lado durante un rato y disfrutá de una actividad sin pantallas.",
+    "category": "Bienestar",
+    "duration": "15 minutos",
+    "points": 20,
+    "icon": "phone-portrait-outline"
+  },
+  {
+    "id": 4,
+    "title": "Un momento para agradecer",
+    "description": "Escribí tres cosas pequeñas por las que te sentís agradecida hoy.",
+    "category": "Autocuidado",
+    "duration": "5 minutos",
+    "points": 10,
+    "icon": "heart-outline"
+  }
+]
