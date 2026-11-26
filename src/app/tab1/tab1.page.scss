@@ -17,7 +17,7 @@
     background: linear-gradient(135deg, #eee5f5, #f8eaf0);
     border: 1px solid #eee3f1;
     border-radius: 26px;
-    box-shadow: 0 5px 18px rgba(115, 91, 130, 0.06);
+    box-shadow: 0 5px 18px rgba(115, 91, 130, .06);
 }
 
 .welcome-text {
@@ -35,10 +35,9 @@
 
 .welcome-text h1 {
     margin: 0;
-    color: #55445f;
     font-size: 29px;
     font-weight: 700;
-    letter-spacing: -0.7px;
+    letter-spacing: -.7px;
 }
 
 .welcome-message {
@@ -57,7 +56,7 @@
     width: 62px;
     height: 62px;
     color: #9277a3;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, .65);
     border-radius: 50%;
 }
 
@@ -65,8 +64,6 @@
     font-size: 36px;
 }
 
-
-/* Resumen de hábitos */
 .summary-section,
 .habits-section {
     margin-top: 30px;
@@ -76,20 +73,38 @@
     margin-bottom: 16px;
 }
 
-.section-heading h2 {
-    margin: 0;
+.section-heading h2,
+.period-info h3,
+.welcome-text h1,
+.habit-info h3,
+.habit-form h3,
+.summary-number {
     color: #55445f;
+}
+
+.section-heading h2,
+.period-info h3 {
+    margin: 0;
     font-size: 20px;
     font-weight: 700;
 }
 
-.section-heading p {
+.period-info h3 {
+    font-size: 16px;
+}
+
+.section-heading p,
+.period-info p {
     margin: 5px 0 0;
     color: #918498;
     font-size: 13px;
 }
 
-/* Contadores */
+.period-info p {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
 .summary-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -121,7 +136,6 @@
 }
 
 .summary-number {
-    color: #55445f;
     font-size: 27px;
     font-weight: 700;
 }
@@ -133,7 +147,6 @@
     text-align: center;
 }
 
-/* Tarjetas de hábitos */
 .habits-section {
     margin-bottom: 20px;
 }
@@ -144,22 +157,26 @@
     gap: 13px;
     margin-bottom: 12px;
     padding: 16px;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #eee8f1;
     border-radius: 20px;
-    box-shadow: 0 3px 12px rgba(115, 91, 130, 0.04);
-    transition: background 0.2s ease;
+    box-shadow: 0 3px 12px rgba(115, 91, 130, .04);
+    transition: background .2s ease;
 }
 
 .habit-completed {
     background: #f3f0f6;
 }
 
-.habit-emoji {
+.habit-emoji,
+.period-icon {
     display: flex;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
+}
+
+.habit-emoji {
     width: 46px;
     height: 46px;
     background: #f5eff8;
@@ -174,7 +191,6 @@
 
 .habit-info h3 {
     margin: 0;
-    color: #55445f;
     font-size: 15px;
     font-weight: 650;
 }
@@ -201,7 +217,7 @@
     padding: 0;
     color: #b9a9c2;
     background: transparent;
-    border: none;
+    border: 0;
     font-size: 27px;
     cursor: pointer;
 }
@@ -210,7 +226,6 @@
     color: #8b719b;
 }
 
-/* Grupos por momento del día */
 .period-section {
     margin-bottom: 24px;
 }
@@ -224,12 +239,8 @@
 }
 
 .period-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 42px;
     height: 42px;
-    flex-shrink: 0;
     color: #9277a3;
     background: #eee7f5;
     border-radius: 15px;
@@ -238,19 +249,6 @@
 
 .period-info {
     flex: 1;
-}
-
-.period-info h3 {
-    margin: 0;
-    color: #55445f;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.period-info p {
-    margin: 4px 0 0;
-    color: #918498;
-    font-size: 12px;
 }
 
 .period-count {
