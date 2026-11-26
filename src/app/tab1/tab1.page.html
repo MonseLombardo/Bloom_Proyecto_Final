@@ -45,14 +45,50 @@
       </div>
     </section>
 
-    <!-- Hábitos organizados por momento del día -->
     <section class="habits-section">
-      <div class="section-heading">
+      <div class="section-heading habits-heading">
         <div>
           <h2>Mis hábitos</h2>
           <p>Elegí avanzar a tu propio ritmo.</p>
         </div>
+
+        <button class="add-habit-button" (click)="showHabitForm = !showHabitForm">
+          <span>+</span>
+          Agregar
+        </button>
       </div>
+
+      @if (showHabitForm) {
+      <form class="habit-form" (submit)="$event.preventDefault(); addHabit()">
+        <h3>Un nuevo hábito</h3>
+        <p>Sumá otro pequeño paso a tu día.</p>
+
+        <label for="habit-name">Nombre del hábito</label>
+        <input id="habit-name" type="text" placeholder="Ej. Meditar" [(ngModel)]="newHabitName" name="habitName"
+          required />
+
+        <label for="habit-description">Descripción</label>
+        <input id="habit-description" type="text" placeholder="¿Qué te gustaría hacer?"
+          [(ngModel)]="newHabitDescription" name="habitDescription" />
+
+        <label for="habit-period">Momento del día</label>
+        <select id="habit-period" [(ngModel)]="newHabitPeriod" name="habitPeriod">
+          <option value="Mañana">Mañana</option>
+          <option value="Tarde">Tarde</option>
+          <option value="Noche">Noche</option>
+        </select>
+
+        <div class="habit-form-actions">
+          <button type="button" class="cancel-button" (click)="showHabitForm = false">
+            Cancelar
+          </button>
+
+          <button type="submit" class="save-button" [disabled]="!newHabitName.trim()">
+            Guardar hábito
+          </button>
+        </div>
+      </form>
+      }
 
       @for (period of periods; track period.name) {
       <div class="period-section">
