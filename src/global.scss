@@ -35,3 +35,111 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Bloom - formulario de hábitos personalizados */
+.day-container .habits-heading,
+.day-container .add-habit-button,
+.day-container .habit-form-actions {
+    display: flex;
+    align-items: center;
+}
+
+.day-container .habits-heading {
+    justify-content: space-between;
+}
+
+.day-container .add-habit-button {
+    gap: 6px;
+    flex-shrink: 0;
+    padding: 10px 14px;
+    color: #725b83;
+    background: #eee7f5;
+    border: 1px solid #e5d9ed;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.day-container .add-habit-button span {
+    font-size: 19px;
+}
+
+.day-container .habit-form {
+    margin-bottom: 22px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #eee3f1;
+    border-radius: 22px;
+    box-shadow: 0 4px 14px rgba(115, 91, 130, .05);
+}
+
+.day-container .habit-form h3 {
+    margin: 0;
+}
+
+.day-container .habit-form>p {
+    margin: 6px 0 18px;
+    color: #918498;
+    font-size: 13px;
+}
+
+.day-container .habit-form label {
+    display: block;
+    margin: 14px 0 7px;
+    color: #766481;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.day-container .habit-form input,
+.day-container .habit-form select {
+    width: 100%;
+    padding: 12px;
+    color: #55445f;
+    background: #faf8fc;
+    border: 1px solid #e9e1ee;
+    border-radius: 13px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.day-container .habit-form input:focus,
+.day-container .habit-form select:focus {
+    border-color: #b9a2ca;
+    box-shadow: 0 0 0 3px rgba(185, 162, 202, .12);
+}
+
+.day-container .habit-form input::placeholder {
+    color: #b0a4b7;
+}
+
+.day-container .habit-form-actions {
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.day-container .cancel-button,
+.day-container .save-button {
+    padding: 11px 15px;
+    border-radius: 13px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.day-container .cancel-button {
+    color: #887694;
+    background: #f5f1f8;
+    border: 1px solid #ece4f0;
+}
+
+.day-container .save-button {
+    color: #fff;
+    background: #9277a3;
+    border: 1px solid #9277a3;
+}
+
+.day-container .save-button:disabled {
+    opacity: .45;
+}
