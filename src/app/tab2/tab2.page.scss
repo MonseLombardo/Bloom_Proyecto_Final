@@ -1,0 +1,141 @@
+﻿.missions-content {
+  --background: #fdfbff;
+}
+
+.missions-intro {
+  padding: 28px 22px 18px;
+}
+
+.eyebrow {
+  color: #9b85bb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.missions-intro h1 {
+  margin: 10px 0 8px;
+  color: #514467;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.missions-intro p {
+  margin: 0;
+  color: #898195;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.missions-list {
+  padding: 0 14px 24px;
+}
+
+.mission-card {
+  margin: 12px 0;
+  border: 1px solid #f0eaf7;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(112, 91, 139, 0.06);
+}
+
+.mission-card ion-card-header {
+  padding: 18px 18px 8px;
+}
+
+.mission-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.mission-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 15px;
+  background: #f2edfa;
+  color: #9278b5;
+}
+
+.mission-icon ion-icon {
+  font-size: 23px;
+}
+
+.mission-heading ion-badge {
+  --background: #f8f1fa;
+  --color: #987ba9;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mission-card ion-card-title {
+  color: #514467;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.mission-card ion-card-content {
+  padding: 4px 18px 18px;
+}
+
+.mission-description {
+  margin: 4px 0 18px;
+  color: #898195;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.mission-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 13px;
+  border-top: 1px solid #f3eff7;
+}
+
+.mission-duration {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #9a91a5;
+  font-size: 12px;
+}
+
+.mission-duration ion-icon {
+  color: #a58bc1;
+  font-size: 16px;
+}
+
+.mission-points {
+  color: #9476ad;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.loading-state,
+.message-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 24px;
+  color: #91849f;
+  text-align: center;
+}
+
+.loading-state ion-spinner {
+  color: #a58bc1;
+}
+
+.loading-state p,
+.message-state p {
+  font-size: 13px;
+  line-height: 1.6;
+}
