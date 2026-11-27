@@ -1,9 +1,19 @@
 ﻿.missions-content {
-  --background: #fdfbff;
+  --background: #f8f5fb;
+}
+
+.missions-intro,
+.missions-list,
+.loading-state,
+.message-state {
+  width: 100%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .missions-intro {
-  padding: 28px 22px 18px;
+  padding: 32px 22px 22px;
 }
 
 .eyebrow {
@@ -15,9 +25,10 @@
 
 .missions-intro h1 {
   margin: 10px 0 8px;
-  color: #514467;
-  font-size: 26px;
+  color: #55445f;
+  font-size: 27px;
   font-weight: 700;
+  letter-spacing: -.5px;
 }
 
 .missions-intro p {
@@ -28,26 +39,27 @@
 }
 
 .missions-list {
-  padding: 0 14px 24px;
+  padding: 0 22px 40px;
 }
 
 .mission-card {
+  width: 100%;
   margin: 12px 0;
-  border: 1px solid #f0eaf7;
+  background: #fff;
+  border: 1px solid #eee8f1;
   border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 4px 14px rgba(112, 91, 139, 0.06);
+  box-shadow: 0 3px 12px rgba(115, 91, 130, .05);
 }
 
 .mission-card ion-card-header {
-  padding: 18px 18px 8px;
+  padding: 17px 17px 8px;
 }
 
 .mission-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 
 .mission-icon {
@@ -56,9 +68,9 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 15px;
+  color: #9277a3;
   background: #f2edfa;
-  color: #9278b5;
+  border-radius: 15px;
 }
 
 .mission-icon ion-icon {
@@ -75,17 +87,17 @@
 }
 
 .mission-card ion-card-title {
-  color: #514467;
+  color: #55445f;
   font-size: 17px;
   font-weight: 700;
 }
 
 .mission-card ion-card-content {
-  padding: 4px 18px 18px;
+  padding: 4px 17px 17px;
 }
 
 .mission-description {
-  margin: 4px 0 18px;
+  margin: 4px 0 16px;
   color: #898195;
   font-size: 13px;
   line-height: 1.6;
@@ -96,7 +108,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding-top: 13px;
+  padding-top: 12px;
   border-top: 1px solid #f3eff7;
 }
 
@@ -125,7 +137,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 45px 24px;
+  padding: 45px 22px;
   color: #91849f;
   text-align: center;
 }
