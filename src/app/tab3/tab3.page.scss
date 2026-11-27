@@ -49,6 +49,15 @@
     border: 1px solid #eee8f1;
     border-radius: 20px;
     box-shadow: 0 3px 12px rgba(115, 91, 130, .05);
+    overflow: hidden;
+}
+
+.tip-image {
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .tip-card ion-card-header {
