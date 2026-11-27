@@ -151,3 +151,20 @@
   font-size: 13px;
   line-height: 1.6;
 }
+
+.mission-card ion-button {
+  margin-top: 16px;
+  --background: #a58bc1;
+  --background-hover: #9277ad;
+  --color: #fff;
+  --border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  --box-shadow: none;
+}
+
+.mission-card ion-button.button-outline {
+  --background: #f2edfa;
+  --color: #9277ad;
+  --border-color: #cbb9dc;
+}
