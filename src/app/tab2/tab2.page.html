@@ -49,6 +49,14 @@
             ✨ {{ mision.points }} puntos
           </span>
         </div>
+         <ion-button
+          expand="block"
+          [fill]="isCompleted(mision.id) ? 'outline' : 'solid'"
+          [color]="isCompleted(mision.id) ? 'success' : 'tertiary'"
+          (click)="toggleMission(mision.id)"
+        >
+          {{ isCompleted(mision.id) ? '¡Misión completada! ✓' : 'Completar misión' }}
+        </ion-button>
       </ion-card-content>
     </ion-card>
     }
