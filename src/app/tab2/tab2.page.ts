@@ -1,8 +1,5 @@
 ﻿import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonIcon,
   IonCard,
@@ -28,9 +25,6 @@ import { MisionesService } from '../services/misiones.service';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
   imports: [
-    IonHeader,
-    IonToolbar,
-    IonTitle,
     IonContent,
     IonIcon,
     IonCard,
