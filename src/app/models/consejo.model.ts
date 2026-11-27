@@ -4,4 +4,5 @@ export interface Consejo {
     description: string;
     category: string;
     icon: string;
+    image: string;
 }
