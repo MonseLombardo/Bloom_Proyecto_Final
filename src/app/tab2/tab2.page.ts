@@ -8,6 +8,7 @@ import {
   IonCardContent,
   IonBadge,
   IonSpinner,
+  IonButton,
 } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import {
@@ -33,12 +34,16 @@ import { MisionesService } from '../services/misiones.service';
     IonCardContent,
     IonBadge,
     IonSpinner,
+    IonButton,
   ],
 })
 export class Tab2Page implements OnInit {
   misiones: Mision[] = [];
   loading = true;
   error = '';
+
+  completedMissions: number[] = [];
+  private readonly storageKey = 'bloom-missions-completed';
 
   constructor(
     private misionesService: MisionesService,
@@ -53,6 +58,12 @@ export class Tab2Page implements OnInit {
   }
 
   ngOnInit(): void {
+    const savedMissions = localStorage.getItem(this.storageKey);
+
+    if (savedMissions) {
+      this.completedMissions = JSON.parse(savedMissions);
+    }
+
     this.misionesService.obtenerMisiones().subscribe({
       next: (misiones) => {
         this.misiones = misiones;
@@ -66,4 +77,22 @@ export class Tab2Page implements OnInit {
       },
     });
   }
+  isCompleted(id: number): boolean {
+    return this.completedMissions.includes(id);
+  }
+
+  toggleMission(id: number): void {
+    if (this.isCompleted(id)) {
+      this.completedMissions = this.completedMissions.filter(
+        missionId => missionId !== id,
+      );
+    } else {
+      this.completedMissions = [...this.completedMissions, id];
+    }
+
+    localStorage.setItem(
+      this.storageKey,
+      JSON.stringify(this.completedMissions),
+    );
+  } 
 }
