@@ -26,6 +26,9 @@
   <section class="tips-list">
     @for (consejo of consejos; track consejo.id) {
     <ion-card class="tip-card">
+
+      <img [src]="consejo.image" [alt]="consejo.title" class="tip-image" />
+
       <ion-card-header>
         <div class="tip-heading">
           <div class="tip-icon">
@@ -40,6 +43,7 @@
       <ion-card-content>
         <p>{{ consejo.description }}</p>
       </ion-card-content>
+
     </ion-card>
     }
   </section>
