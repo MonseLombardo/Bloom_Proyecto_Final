@@ -4,27 +4,31 @@
     "title": "Empezá de a poco",
     "description": "No necesitás cambiar todos tus hábitos de una vez. Elegí uno pequeño y trabajá en mantenerlo.",
     "category": "Hábitos",
-    "icon": "seedling"
+    "icon": "seedling",
+    "image": "assets/images/consejos/consejo-planta.png"
   },
   {
     "id": 2,
     "title": "Descansar también es avanzar",
     "description": "Hacer pausas durante el día ayuda a recuperar energía y mantener la concentración.",
     "category": "Bienestar",
-    "icon": "moon-outline"
+    "icon": "moon-outline",
+    "image": "assets/images/consejos/consejo-descanso.png"
   },
   {
     "id": 3,
     "title": "La constancia vale más que la perfección",
     "description": "Si un día no cumplís con tu rutina, no te castigues. Podés volver a intentarlo mañana.",
     "category": "Motivación",
-    "icon": "heart-outline"
+    "icon": "heart-outline",
+    "image": "assets/images/consejos/consejo-diario.png"
   },
   {
     "id": 4,
     "title": "Hacé espacio para vos",
     "description": "Reservá unos minutos para realizar algo que disfrutes y te ayude a sentirte bien.",
     "category": "Autocuidado",
-    "icon": "flower-outline"
+    "icon": "flower-outline",
+    "image": "assets/images/consejos/consejo-autocuidado.png"
   }
 ]
