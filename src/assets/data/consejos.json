@@ -5,7 +5,7 @@
     "description": "No necesitás cambiar todos tus hábitos de una vez. Elegí uno pequeño y trabajá en mantenerlo.",
     "category": "Hábitos",
     "icon": "seedling",
-    "image": "assets/images/consejos/consejo-planta.png"
+    "image": "assets/images/consejos-optimizadas/consejo-planta.webp"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Hacer pausas durante el día ayuda a recuperar energía y mantener la concentración.",
     "category": "Bienestar",
     "icon": "moon-outline",
-    "image": "assets/images/consejos/consejo-descanso.png"
+    "image": "assets/images/consejos-optimizadas/consejo-descanso.webp"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Si un día no cumplís con tu rutina, no te castigues. Podés volver a intentarlo mañana.",
     "category": "Motivación",
     "icon": "heart-outline",
-    "image": "assets/images/consejos/consejo-diario.png"
+    "image": "assets/images/consejos-optimizadas/consejo-diario.webp"
   },
   {
     "id": 4,
@@ -29,6 +29,6 @@
     "description": "Reservá unos minutos para realizar algo que disfrutes y te ayude a sentirte bien.",
     "category": "Autocuidado",
     "icon": "flower-outline",
-    "image": "assets/images/consejos/consejo-autocuidado.png"
+    "image": "assets/images/consejos-optimizadas/consejo-autocuidado.webp"
   }
 ]
