@@ -14,6 +14,7 @@ Se utilizó como apoyo para consultar conceptos de Ionic y Angular, mejorar frag
 - Solicitar explicaciones y ejemplos de código para resolver necesidades específicas del proyecto.
 - Consultar cómo integrar y gestionar datos provenientes de archivos JSON.
 - Solicitar sugerencias para mejorar el diseño y la organización de las interfaces.
+- Consultar cómo optimizar imágenes utilizadas en la aplicación, reducir su tamaño y evaluar formatos adecuados sin afectar perceptiblemente su calidad visual.
 - Analizar errores y evaluar posibles soluciones durante el desarrollo.
 
 Los ejemplos representan consultas realizadas durante el trabajo y no son transcripciones literales de las conversaciones.
@@ -34,4 +35,4 @@ Bloom continúa en desarrollo. Por este motivo, tanto las funcionalidades como l
 
 ## 7. Consideraciones finales
 
-La inteligencia artificial fue utilizada como recurso de apoyo para facilitar el desarrollo y la resolución de problemas, sin reemplazar la participación de la estudiante en las decisiones y tareas de implementación.
+La inteligencia artificial fue utilizada como recurso de apoyo para facilitar el desarrollo y la resolución de problemas, sin reemplazar la participación de la estudiante en las decisiones y tareas de implementación. 
